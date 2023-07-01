@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
 			<router-link class="navbar-brand" :to="{ name: 'index' }">
 				<img src="icon.png" height="30" class="d-inline-block align-text-top">
@@ -14,22 +14,29 @@
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
 						<router-link class="nav-link" :to="{ name: 'artworks' }">
-							Уметнине
+							<button class="btn btn-outline-secondary me-1" type="button">Уметнине</button>
 						</router-link>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item dropdown">
 						<router-link class="nav-link" :to="{ name: 'artists' }">
-							Уметници
+							<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								Уметници
+							</button>
+							<ul class="dropdown-menu" >
+								<li><router-link class="dropdown-item" :to="{ name: 'profile' }">Сви</router-link></li>
+								<li><router-link class="dropdown-item" :to="{ name: 'profile' }">Људи</router-link></li>
+								<li><router-link class="dropdown-item" :to="{ name: 'profile' }">Животиње</router-link></li>
+							</ul>
 						</router-link>
 					</li>
 					<li class="nav-item">
 						<router-link class="nav-link" :to="{ name: 'profile' }">
-							Мој профил
+							<button class="btn btn-outline-secondary me-1" type="button">Мој профил</button>
 						</router-link>
 					</li>
 					<li class="nav-item">
 						<router-link class="nav-link" :to="{ name: 'about' }">
-							О нама
+							<button class="btn btn-outline-secondary me-1" type="button">О нама</button>
 						</router-link>
 					</li>
 				</ul>
