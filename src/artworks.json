@@ -13,7 +13,12 @@
 		"category": "paintings",
 		"year": 1893,
 		"price": 1200000,
-		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/1200px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg"
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/1200px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg",
+		"gallery":[{
+			"id":1, "link": "https://upload.wikimedia.org/wikipedia/commons/3/38/The_Scream_and_the_Painter%2C_Edvard_Munch_at_the_National_Gallery_in_Oslo_%2824130397650%29.jpg"
+		}, {
+			"id":2, "link":"https://images-cdn.bridgemanimages.com/api/1.0/image/600wm.XXX.12884730.7055475/3745642.jpg"
+		}]
 	},
 	{
 		"title": "The Persistence of Memory",

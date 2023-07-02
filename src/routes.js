@@ -24,7 +24,7 @@ export default [
     },
     ,
     {
-        path: "/artworks/:name",
+        path: "/artwork/:name",
         name: "current_artwork",
         component: ArtWorkView
     },

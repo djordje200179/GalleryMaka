@@ -17,7 +17,7 @@
 
 	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
 		
-		<router-link v-for="artwork in currentArtwork" :key="artwork.title" :to="'/artworks/' + artwork.title" style="text-decoration: none; color: inherit;">
+		<router-link v-for="artwork in currentArtwork" :key="artwork.title" :to="'/artwork/' + artwork.title" style="text-decoration: none; color: inherit;">
 			<Artwork class="ps-3 pe-3 pb-2"  :artwork="artwork" />
 		</router-link>
 	</div>
