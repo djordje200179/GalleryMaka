@@ -19,7 +19,7 @@
 
 						<ul class="dropdown-menu" >
 							<li>
-								<router-link class="dropdown-item" :to="{ name: 'artworks', params: { category: 'pictures'} }">
+								<router-link class="dropdown-item" :to="{ name: 'artworks', params: { category: 'paintings'} }">
 									Слике
 								</router-link>
 							</li>

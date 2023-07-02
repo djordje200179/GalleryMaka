@@ -1,0 +1,30 @@
+[
+	{
+		"title": "The Starry Night",
+		"category": "paintings",
+		"artist": "Vincent van Gogh",
+		"year": 1889,
+		"price": 1000000
+	}, 
+	{
+		"title": "The Scream",
+		"category": "paintings",
+		"artist": "Edvard Munch",
+		"year": 1893,
+		"price": 1200000
+	},
+	{
+		"title": "The Persistence of Memory",
+		"category": "paintings",
+		"artist": "Salvador Dali",
+		"year": 1931,
+		"price": 1500000
+	},
+	{
+		"title": "The Last Supper",
+		"category": "paintings",
+		"artist": "Leonardo da Vinci",
+		"year": 1495,
+		"price": 2000000
+	}
+]
