@@ -1,0 +1,51 @@
+[
+	{
+		"name":"Vincent Van Gogh",
+		"biography":"Био је сликар холандског порекла. Један је од тројице највећих сликара постимпресионизма и један од најцењенијих сликара уопште. Ван Гог је био син протестантског свештеника, а и он сам је неко време био проповедник. Његова дела су запажена по својој грубој лепоти, емотивној искрености и храбрим бојама, те је захваљујући томе постао један од водећих уметника 19. века. Ван Гог је цртао и сликао са воденим бојама док је био у школи — мада је мали број тих слика сачуван, а и ауторство је довођено у питање за неке од њих. Почетком 1883, он је почео да ради на композицијама са више фигура, које је он базирао на својим цртежима. Највећи део његовог рада се бави разрадом и ревидирањем његових фундаменталних постава. Рођен је 1953. године, а умро 1890.",
+		"artworks":["The Starry Night", "Sunflowers", "Wheatfield with Crows", "The Potato Eaters"],
+		"category":"human",
+		"thumbnail":"https://upload.wikimedia.org/wikipedia/commons/3/38/VanGogh_1887_Selbstbildnis.jpg"
+	},
+	{
+		"name":"Edvard Munch",
+		"biography":"Био је норвешки уметник. Мунк је типичан представник експресионизма у сликарству. Мунк се служи линијама које се издужују и повијају, као и тоновима боја које делују меланхолично. Такву атмосферу створио је на сликама „Крик“, „Тескоба“, „На мосту“. Прославио се у Немачкој у 20. веку, те на тамошње сликаре експресионисте извршио знатан утицај. Приликом сликања слике „Крик“ био је инспирисан црвеним небом од ерупције вулкана Кракатау у Индонезији 1883. на другом крају света. Средином децембра 2006. године стручна комисија је званично објавила да је Мунково најпознатије дело „Крик“, неповратно оштећено док се налазило у поседу крадљиваца који су га предуго изложили штетном дејству влаге.",
+		"artworks":["Self-Portrait with Palette", "Despair", "The Scream"],
+		"category":"human",
+		"thumbnail":"https://upload.wikimedia.org/wikipedia/commons/6/67/Edvard_Munch_1921.jpg"
+	},
+	{
+		"name":"Salvador Dali",
+		"biography":"Био је каталонски и шпански надреалистички уметник, један од најзначајнијих уметника 20. века. Бавио се сликањем, писањем, вајањем, сценографијом и глумом. Он је један од најзначајнијих уметника 20. века, а често га називају и великим мајстором надреализма. Његова уметничка дела показала су да је он један од најкреативнијих сликара свог времена. Далијева честа тематика је свет простора, пијанства, грознице и религије. Овај славни сликар је читавог свог живота веровао у своју посебност. Једни су га сматрали генијем, док су други говорили о њему као поремећеном егоцентрику, чија дела немају никакву вредност. Мада су га шпански ликовни критичари увек сматрали за надобудног и неталентованог шарлатана, популарност и продајна цена његових дела непрестано су расли. Данас, светски колекционари плаћају милионе долара како би у својој колекцији имали бар једну Далијеву слику.",
+		"artworks":["The Persistence of Memory", "The Hallucinogenic Toreador"],
+		"category":"human",
+		"thumbnail":"https://upload.wikimedia.org/wikipedia/commons/f/ff/Dali_Allan_Warren.jpg"
+	},
+	{
+		"name": "Leonardo da Vinci",
+		"biography":"Познат као Леонардо да Винчи, био је италијански ренесансни архитекта, проналазач, инжењер, вајар и сликар. За живота слављен због својих сликарских дела, након смрти постаје познат широј публици и по својим свескама, у којима је цртао и писао белешке о разним темама, укључујући анатомију, астрономију, ботанику, картографију, сликарство и палеонтологију. Леонардов геније је оличење ренесансног хуманистичког идеала,[2] а његово укупно дело је допринос каснијим генерацијама уметника који се може мерити само са доприносом његовог млађег савременика, Микеланђела.",
+		"artworks":["The Last Supper", "Mona Lisa", "The Virgin of the Rocks"],
+		"category":"human",
+		"thumbnail":"https://upload.wikimedia.org/wikipedia/commons/b/b5/Leonardo_di_ser_Piero_da_Vinci.jpg"
+	},
+	{
+		"name": "Pigcasso",
+		"biography":"Pigcasso was rescued just before slaughter in 2016 by Joanne Lefson and taken to Farm Sanctuary SA in Franschhoek, South Africa. When Joanne noticed that Pigcasso ate or destroyed everything except some old paint brushes that were laying in her stall, she decided to nurture the pig’s potential talent. It didn’t take long before Pigcasso began to paint – and over time, the painting process developed into an extraordinary collaboration between human and pig. Lefson selects the colours while Pigcasso takes the brush into her mouth and creates her magic across the canvas. Lefson watches from afar, able to stop Pigcasso if she observes an interesting form developing that is relatable to the human eye. Every original is signed by Pigcasso’s nose-tip, countersigned by Lefson and includes a Certificate of Authenticity. Proceeds from the sale of every artwork benefit the registered nonprofit Farm Sanctuary SA that Lefson established in 2016.",
+		"artworks":["Parrot's plume", "Gentle touch"],
+		"category":"animal",
+		"thumbnail":"https://pigcasso.org/images/Screenshot-2023-06-18-at-16_0007_IMG_2814.jpg"
+	},
+	{
+		"name": "Dogvinci",
+		"biography":"Dagger was adopted by fine artist, Yvonne Dagger.  While in her studio one day during the summer of 2015, Dagger sat faithfully and watched while Yvonne painted.  Then, suddenly, Dagger approached Yvonne and “nudged” her with his snout.  Jokingly, Yvonne asked Dagger if he wanted to paint. His tail began to wag.  At that instant, Yvonne took a table-top easel and canvas and set them on the floor. She utilized the command words Dagger had learned in Professional Training at Canine Companions and within a month, Dagger had learned how to paint.  All Yvonne had to do was place a brush in Dagger’s mouth and with one simple command, “paint,” Dagger immediately went to work creating amazing artwork–where each and every stoke of paint on the canvas is placed by Dagger himself.",
+		"artworks":["Rebirth", "Heart of Gold"],
+		"category":"animal",
+		"thumbnail":"https://www.dogvinci.com/uploads/1/2/1/3/121359914/published/656bb1c9-3d21-484b-a310-a7004a5c4903.jpeg?1629804867"
+	},
+	{
+		"name": "Cholla",
+		"biography":"Cholla (May 20, 1985 – March 22, 2013 in Nevada, United States) was a mustang-Quarter Horse mix known as the painting horse for his very special ability. Because of his wild temper, the cowboys named him after the cholla cactus. Cholla's paintings were shown in local exhibits in the U.S. In 2008 Cholla received international media exposure when his owner sent one of his earlier artworks (The Big Red Buck, 2004) to a painting competition in Mogliano Veneto, Italy. The jury admitted the artwork, as the competition is open to everyone. The horse was awarded an Honor Mention of the Jury, without receiving any money reward, and the artwork was exhibited together with the 30 finalists'.",
+		"artworks":["Flying Horse", "Mentally Free"],
+		"category":"animal",
+		"thumbnail":"https://www.telegraph.co.uk/multimedia/archive/01208/Cholla-2_1208326c.jpg?imwidth=960"
+	}
+]

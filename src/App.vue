@@ -2,7 +2,7 @@
 	<Header />
 	
 	<main class="px-1">
-		<router-view />
+		<router-view :key="$route.fullPath"/>
 	</main>
 
 	<Footer />

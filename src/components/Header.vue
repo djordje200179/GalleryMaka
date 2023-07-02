@@ -43,17 +43,12 @@
 
 						<ul class="dropdown-menu" >
 							<li>
-								<router-link class="dropdown-item" :to="{ name: 'artists' }">
-									Сви
-								</router-link>
-							</li>
-							<li>
-								<router-link class="dropdown-item" :to="{ name: 'artists', params: { category: 'people'} }">
+								<router-link class="dropdown-item" :to="{ name: 'artists', params: { category: 'human'} }">
 									Људи
 								</router-link>
 							</li>
 							<li>
-								<router-link class="dropdown-item" :to="{ name: 'artists', params: { category: 'animals'} }">
+								<router-link class="dropdown-item" :to="{ name: 'artists', params: { category: 'animal'} }">
 									Животиње
 								</router-link>
 							</li>

@@ -22,7 +22,7 @@ export default [
         component: Artworks
     },
     {
-        path: "/artists/:category?",
+        path: "/artists/:category",
         name: "artists",
         component: Artists
     },
