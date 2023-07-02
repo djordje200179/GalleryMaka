@@ -1,12 +1,18 @@
 <template>
 	<Header />
 	
-	<main class="px-1">
+	<main class="px-1" id="main">
 		<router-view :key="$route.fullPath"/>
 	</main>
 
 	<Footer />
 </template>
+
+<style>
+	#main{
+		background-color: #272947;
+	}
+</style>
 
 <script>
 import Header from "@/components/Header.vue";

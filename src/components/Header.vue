@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light" id="header">
 		<div class="container-fluid">
 			<router-link class="navbar-brand" :to="{ name: 'index' }">
 				<img src="icon.png" height="30" class="d-inline-block align-text-top">
@@ -67,13 +67,19 @@
 				<form class="d-flex mx-lg-0 mx-4" role="search" @submit="search">
 					<div class="input-group">
 						<input type="search" class="form-control" placeholder="Претрага" name="searchText" required>
-						<button class="btn btn-outline-success" type="submit">Претражи</button>
+						<button class="btn btn-light" type="submit">Претражи</button>
 					</div>
 				</form>
 			</div>
 		</div>
 	</nav>
 </template>
+
+<style>
+	#header{
+		background-color: #8688b0;
+	}
+</style>
 
 <script>
 export default {
