@@ -4,28 +4,32 @@
 		"artist": "Vincent van Gogh",
 		"category": "paintings",
 		"year": 1889,
-		"price": 1000000
+		"price": 1000000,
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
 	}, 
 	{
 		"title": "The Scream",
 		"artist": "Edvard Munch",
 		"category": "paintings",
 		"year": 1893,
-		"price": 1200000
+		"price": 1200000,
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/1200px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg"
 	},
 	{
 		"title": "The Persistence of Memory",
 		"artist": "Salvador Dali",
 		"category": "paintings",
 		"year": 1931,
-		"price": 1500000
+		"price": 1500000,
+		"thumbnail": "https://uploads6.wikiart.org/images/salvador-dali/the-persistence-of-memory-1931.jpg!Large.jpg"
 	},
 	{
 		"title": "The Last Supper",
 		"artist": "Leonardo da Vinci",
 		"category": "paintings",
 		"year": 1495,
-		"price": 2000000
+		"price": 2000000,
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/4/4b/%C3%9Altima_Cena_-_Da_Vinci_5.jpg"
 	},
 
 	{
@@ -33,13 +37,15 @@
 		"artist": "Unknown",
 		"category": "sculptures",
 		"year": -28000,
-		"price": 1000000
+		"price": 1000000,
+		"thumbnail": "https://images.ctfassets.net/cnu0m8re1exe/6wt1O7yX5Dnkbl0Ebev3ML/e9223a13168512f18f4f7efd5b8fef3a/1200px-Venus_of_Willendorf_-_All_sides.png"
 	},
 	{
 		"title": "Bust of Nefertiti",
 		"artist": "Unknown",
 		"category": "sculptures",
 		"year": -1345,
-		"price": 1200000
+		"price": 1200000,
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Nofretete_Neues_Museum.jpg"
 	}
 ]
