@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'ArtWorks',
+    name: 'Artworks',
     components: {
   
     }

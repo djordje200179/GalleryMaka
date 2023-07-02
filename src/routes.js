@@ -1,7 +1,7 @@
 import Index from "./views/Index.vue";
 import Search from "./views/Search.vue";
 import About from "./views/About.vue";
-import ArtWorks from "./views/ArtWorks.vue";
+import Artworks from "./views/Artworks.vue";
 import Artists from "./views/Artists.vue";
 import Profile from "./views/Profile.vue";
 
@@ -17,12 +17,12 @@ export default [
         component: Search,
     },
     {
-        path: "/artworks",
+        path: "/artworks/:category",
         name: "artworks",
-        component: ArtWorks
+        component: Artworks
     },
     {
-        path: "/artists",
+        path: "/artists/:category?",
         name: "artists",
         component: Artists
     },
