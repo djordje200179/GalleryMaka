@@ -4,6 +4,7 @@ import About from "./views/About.vue";
 import Artworks from "./views/Artworks.vue";
 import Artists from "./views/Artists.vue";
 import Profile from "./views/Profile.vue";
+import ArtWorkView from "./views/ArtWorkView.vue";
 
 export default [
 	{ 
@@ -20,6 +21,12 @@ export default [
         path: "/artworks/:category",
         name: "artworks",
         component: Artworks
+    },
+    ,
+    {
+        path: "/artworks/:name",
+        name: "current_artwork",
+        component: ArtWorkView
     },
     {
         path: "/artists/:category",

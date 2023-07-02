@@ -1,10 +1,10 @@
 <template>
 
 	<div class="d-flex">
-		<div class="dropdown ms-auto mt-1 mb-3 me-3">
-			<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-								Сортирање
-			</a>
+		<div class="dropdown ms-auto mt-1 mb-3 me-3 ">
+			<button class="btn btn-light dropdown-toggle mt-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    			Сортирање
+  				</button>
 		<ul class="dropdown-menu">
 			<li><button class="dropdown-item" type="button" @click="currentArtists = artistsByNameUp">Називу растуће</button></li>
 			<li><button class="dropdown-item" type="button" @click="currentArtists = artistsByNameDown">Називу опадајуће</button></li>
@@ -14,7 +14,7 @@
 	
 
 	<div class="container">
-			<Artist class="" v-for="artist in currentArtists" :key="artist.name" :artist="artist" />
+			<Artist class="pb-3" v-for="artist in currentArtists" :key="artist.name" :artist="artist" />
 	</div>
 </template>
 

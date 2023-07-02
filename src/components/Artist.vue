@@ -1,5 +1,5 @@
 <template>
-  <div class="row mb-3">
+  <div class="row ">
     <!-- <div class="card mb-3" style="max-width: 540px;"> -->
   <!-- <div class="row g-0"> -->
     <div class=" card col-md-4 art">

@@ -2,9 +2,9 @@
 
 	<div class="d-flex">
 		<div class="dropdown ms-auto mt-1 mb-3 me-3">
-			<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-								Сортирање
-			</a>
+			<button class="btn btn-light dropdown-toggle mt-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    			Сортирање
+  				</button>
 		<ul class="dropdown-menu">
 			<li><button class="dropdown-item" type="button" @click="currentArtwork = artworksByArtWorkNameUp">Назив уметнине растуће</button></li>
 			<li><button class="dropdown-item" type="button" @click="currentArtwork = artworksByArtWorkNameDown">Назив уметнине опадајуће</button></li>
@@ -16,7 +16,10 @@
 	
 
 	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-		<Artwork v-for="artwork in currentArtwork" :key="artwork.title" :artwork="artwork" />
+		
+		<router-link v-for="artwork in currentArtwork" :key="artwork.title" :to="'/artworks/' + artwork.title" style="text-decoration: none; color: inherit;">
+			<Artwork class="ps-3 pe-3 pb-2"  :artwork="artwork" />
+		</router-link>
 	</div>
 </template>
 
