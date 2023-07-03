@@ -300,5 +300,261 @@
 				"comment": "I agree with Jone"
 			}
 		]
+	},
+	{
+		"title": "Villa Savoye",
+		"artist": "Le Corbusier",
+		"category": "other",
+		"year": 1931,
+		"price": 30000000,
+		"thumbnail": "https://cdn.kastatic.org/ka-perseus-images/889d4b84b5d369689745b2441c7427e07089bef5.jpg",
+		"gallery":[
+			{
+				"id":1, 
+				"link": "https://1.bp.blogspot.com/-3AMrzO5Srp8/X_uFAOxi3rI/AAAAAAAAD0w/dze3sVv25yI-ckSoGO4C2I9kE3Y7dVZAwCLcBGAsYHQ/s1600/Villa%2BSavoye.png"
+			}, 
+			{
+				"id":2, 
+				"link":"https://www.friendschoices.com/photo/recommendationcomment/5354/8500.jpg"
+			}
+		],
+		"bids": [
+			{
+				"id": 1,
+				"bidder": "John Doe",
+				"amount": 1000000
+			},
+			{
+				"id": 2,
+				"bidder": "Jane Doe",
+				"amount": 2000000
+			}
+		],
+		"comments": [
+			{
+				"id": 1,
+				"commenter": "John Doe",
+				"comment": "This is very nice"
+			},
+			{
+				"id": 2,
+				"commenter": "Jane Doe",
+				"comment": "I agree with Jone"
+			}
+		]
+	},
+	{
+		"title": "Falling Waters",
+		"artist": "Frank Lloyd Wright",
+		"category": "other",
+		"year": 1936,
+		"price": 40000000,
+		"thumbnail": "https://www.re-thinkingthefuture.com/wp-content/uploads/2020/05/A871-50-MODERNIST-ARCHITECTS-AND-THEIR-WORKS-FRANK-LLOYD-WRIGHT-IMAGE-1-1024x818.jpg",
+		"gallery":[
+			{
+				"id":1, 
+				"link": "https://www.meganotravels.com/wp-content/uploads/2014/03/IMG_8524.jpg"
+			}, 
+			{
+				"id":2, 
+				"link":"https://archeyes.com/wp-content/uploads/2021/02/Fallingwater-frank-lloyd-wright-kauffman-house-edgar-ArchEyes-level-1.jpg"
+			}
+		],
+		"bids": [
+			{
+				"id": 1,
+				"bidder": "John Doe",
+				"amount": 1000000
+			},
+			{
+				"id": 2,
+				"bidder": "Jane Doe",
+				"amount": 2000000
+			}
+		],
+		"comments": [
+			{
+				"id": 1,
+				"commenter": "John Doe",
+				"comment": "This is very nice"
+			},
+			{
+				"id": 2,
+				"commenter": "Jane Doe",
+				"comment": "I agree with Jone"
+			}
+		]
+	},
+	{
+		"title": "The Pompidou Centre",
+		"artist": "Richard George Rogers",
+		"category": "other",
+		"year": 1936,
+		"price": 40000000,
+		"thumbnail": "https://blog.artsper.com/wp-content/uploads/2014/07/New-Featured-Image-1200-x-675-2.jpg",
+		"gallery":[
+			{
+				"id":1, 
+				"link": "https://snippetsofparis.com/wp-content/uploads/2021/09/IMG_9772-centre-pompidou.jpg"
+			}, 
+			{
+				"id":2, 
+				"link":"https://rshp.com/assets/crops/4x2.50dad431.99_0322.jpg"
+			}, 
+			{
+				"id":3, 
+				"link":"https://www.atlasofplaces.com/atlas-of-places-images/ATLAS-OF-PLACES-PIANO-ROGERS-CENTRE-POMPIDOU-GPH-1.jpg"
+			}
+		],
+		"bids": [
+			{
+				"id": 1,
+				"bidder": "John Doe",
+				"amount": 1000000
+			},
+			{
+				"id": 2,
+				"bidder": "Jane Doe",
+				"amount": 2000000
+			}
+		],
+		"comments": [
+			{
+				"id": 1,
+				"commenter": "John Doe",
+				"comment": "This is very nice"
+			},
+			{
+				"id": 2,
+				"commenter": "Jane Doe",
+				"comment": "I agree with Jone"
+			}
+		]
+	},
+	{
+		"title": "Parrot's plume",
+		"artist": "Pigcasso",
+		"category": "paintings",
+		"year": 2023,
+		"price": 270000,
+		"thumbnail": "https://pigcasso.myshopify.com/cdn/shop/files/Parrot_sPlume_1024x1024@2x.jpg?v=1687432186",
+		"gallery":[
+			{
+				"id":1, 
+				"link": "https://nypost.com/wp-content/uploads/sites/2/2016/11/pigacasso.jpg?quality=75&strip=all"
+			}, 
+			{
+				"id":2, 
+				"link":"https://www.deckleedge.co.za/wp-content/uploads/2022/02/Pigcasso-Love-1.jpg"
+			}
+		],
+		"bids": [
+			{
+				"id": 1,
+				"bidder": "John Doe",
+				"amount": 1000000
+			},
+			{
+				"id": 2,
+				"bidder": "Jane Doe",
+				"amount": 2000000
+			}
+		],
+		"comments": [
+			{
+				"id": 1,
+				"commenter": "John Doe",
+				"comment": "This is very nice"
+			},
+			{
+				"id": 2,
+				"commenter": "Jane Doe",
+				"comment": "I agree with Jone"
+			}
+		]
+	},
+	{
+		"title": "Rebirth",
+		"artist": "Dogvinci",
+		"category": "paintings",
+		"year": 2022,
+		"price": 200,
+		"thumbnail": "https://www.dogvinci.com/uploads/1/2/1/3/121359914/s604389972181455982_p197_i9_w912.jpeg?width=640",
+		"gallery":[
+			{
+				"id":1, 
+				"link": "https://www.dogvinci.com/uploads/1/2/1/3/121359914/barney-6-19-23-3-img-8382.jpg"
+			}, 
+			{
+				"id":2, 
+				"link":"https://www.dogvinci.com/uploads/1/2/1/3/121359914/published/barney-7-4-23-july-4th.jpg?1688410789"
+			}
+		],
+		"bids": [
+			{
+				"id": 1,
+				"bidder": "John Doe",
+				"amount": 1000000
+			},
+			{
+				"id": 2,
+				"bidder": "Jane Doe",
+				"amount": 2000000
+			}
+		],
+		"comments": [
+			{
+				"id": 1,
+				"commenter": "John Doe",
+				"comment": "This is very nice"
+			},
+			{
+				"id": 2,
+				"commenter": "Jane Doe",
+				"comment": "I agree with Jone"
+			}
+		]
+	},
+	{
+		"title": "Flying Horse",
+		"artist": "Cholla",
+		"category": "paintings",
+		"year": 2010,
+		"price": 500,
+		"thumbnail": "https://www.giudecca795.com/im/art/_im/00219/large.jpg",
+		"gallery":[
+			{
+				"id":1, 
+				"link": "https://cdn.shopify.com/s/files/1/0160/7832/files/photo_copy_2.JPG?2001"
+			}, 
+			{
+				"id":2, 
+				"link":"https://www.telegraph.co.uk/multimedia/archive/01208/Cholla-2_1208326c.jpg"
+			}
+		],
+		"bids": [
+			{
+				"id": 1,
+				"bidder": "John Doe",
+				"amount": 1000000
+			},
+			{
+				"id": 2,
+				"bidder": "Jane Doe",
+				"amount": 2000000
+			}
+		],
+		"comments": [
+			{
+				"id": 1,
+				"commenter": "John Doe",
+				"comment": "This is very nice"
+			},
+			{
+				"id": 2,
+				"commenter": "Jane Doe",
+				"comment": "I agree with Jone"
+			}
+		]
 	}
 ]
