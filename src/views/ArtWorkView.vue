@@ -58,11 +58,15 @@
 			</tr>
 		</tbody>
 	</table>
-	<form class="input-group shrinked-element mx-auto" @submit="addBid">
+	<form class="input-group shrinked-element mx-auto my-2" @submit="addBid">
 		<input type="text" class="form-control" placeholder="Дајте вашу понуду"
 			   name="offerAmount" required>
 		<button class="btn btn-light">Постави понуду</button>
 	</form>
+	<div v-if="offerSubmitted" class="alert alert-success fade show shrinked-element mx-auto"
+		 @click="offerSubmitted = false" role="alert">
+		Ваша понуда је успешно послата!
+	</div>
 	
 	<h1 class="display-6 mt-3 mb-1 text-white text-center">Коментари</h1>
 	<table class="table table-dark mx-auto text-center shrinked-element">
@@ -79,11 +83,15 @@
 			</tr>
 		</tbody>
 	</table>
-	<form class="input-group shrinked-element mx-auto mb-2" @submit="addComment">
+	<form class="input-group shrinked-element mx-auto my-2" @submit="addComment">
 		<input type="text" class="form-control" placeholder="Унесите ваш коментар"
 			   name="commentText" required>
 		<button class="btn btn-light">Постави коментар</button>
 	</form>
+	<div v-if="commentPosted" class="alert alert-success fade show shrinked-element mx-auto"
+		 @click="commentPosted = false" role="alert">
+		Ваш коментар је успешно постављен!
+	</div>
 </template>
 
 <script>
@@ -92,6 +100,12 @@ import artists from "../artists.json";
 
 export default {
 	name: "ArtworkView",
+	data() {
+		return {
+			offerSubmitted: false,
+			commentPosted: false
+		}
+	},
 	computed: {
 		artwork() {
 			return artworks.find(artwork => artwork.title == this.$route.params.name);
@@ -119,6 +133,8 @@ export default {
 			const currentBids = JSON.parse(localStorage.getItem("bids") || "[]");
 			currentBids.push(newBid);
 			localStorage.setItem("bids", JSON.stringify(currentBids));
+
+			this.offerSubmitted = true;
 		},
 		addComment(event) {
 			event.preventDefault();
@@ -134,6 +150,8 @@ export default {
 			const currentComments = JSON.parse(localStorage.getItem("comments") || "[]");
 			currentComments.push(newComment);
 			localStorage.setItem("comments", JSON.stringify(currentComments));
+
+			this.commentPosted = true;
 		}
 	}
 }
