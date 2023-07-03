@@ -1,5 +1,4 @@
 <template>
-
 	<div class="d-flex">
 		<div class="dropdown ms-auto mt-1 mb-3 me-3">
 			<button class="btn btn-light dropdown-toggle mt-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,7 +30,7 @@
 		</div>
 	</div>
 	
-	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mx-1">
 		<router-link v-for="artwork in artworks" :key="artwork.title" 
 					 class="artwork-link mb-2 px-1 px-2" 
 					 :to=" { name: 'artwork', params: { name: artwork.title} }">

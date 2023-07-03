@@ -4,8 +4,8 @@
 			<img :src="artwork.thumbnail" class="card-img-top" :alt="artwork.title">
 
 			<div class="card-body" id="body">
-				<h5 class="card-title">{{ artwork.title }}</h5>
-				<h6 class="card-subtitle mb-2 text-muted">{{ artwork.artist }}</h6>
+				<h5 class="card-title text-nowrap text-truncate">{{ artwork.title }}</h5>
+				<h6 class="card-subtitle mb-2 text-muted text-nowrap text-truncate">{{ artwork.artist }}</h6>
 			</div>
 
 			<div class="card-footer">
