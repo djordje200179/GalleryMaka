@@ -9,7 +9,9 @@
 			</div>
 
 			<div class="card-footer">
-				<small class="text-muted">Процењена вредност: {{ artwork.price }}</small>
+				<small class="text-muted">
+					{{ $t("estimatedPrice") }}: {{ artwork.price }}
+				</small>
 			</div>
 		</div>
 	</div>

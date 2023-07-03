@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar navbar-expand-lg navbar-light">
+	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
 			<router-link class="navbar-brand" :to="{ name: 'index' }">
 				<img src="icon.png" height="30" class="d-inline-block align-text-top">
@@ -14,25 +14,23 @@
 				<ul class="navbar-nav me-auto">
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-							Уметнине
+							{{ $t("artworksView") }}
 						</a>
 
 						<ul class="dropdown-menu">
 							<li>
-								<router-link class="dropdown-item"
-									:to="{ name: 'artworks', params: { category: 'paintings' } }">
-									Слике
+								<router-link class="dropdown-item" :to="{ name: 'artworks', params: { category: 'paintings' } }">
+									{{  $t("paintings") }}
 								</router-link>
 							</li>
 							<li>
-								<router-link class="dropdown-item"
-									:to="{ name: 'artworks', params: { category: 'sculptures' } }">
-									Скулптуре
+								<router-link class="dropdown-item" :to="{ name: 'artworks', params: { category: 'sculptures' } }">
+									{{ $t("sculptures") }}
 								</router-link>
 							</li>
 							<li>
 								<router-link class="dropdown-item" :to="{ name: 'artworks', params: { category: 'other' } }">
-									Остале уметнине
+									{{ $t("otherArtworks") }}
 								</router-link>
 							</li>
 						</ul>
@@ -40,37 +38,43 @@
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-							Уметници
+							{{ $t("artistsView") }}
 						</a>
 
 						<ul class="dropdown-menu">
 							<li>
 								<router-link class="dropdown-item" :to="{ name: 'artists', params: { category: 'human' } }">
-									Људи
+									{{ $t("humans") }}
 								</router-link>
 							</li>
 							<li>
 								<router-link class="dropdown-item" :to="{ name: 'artists', params: { category: 'animal' } }">
-									Животиње
+									{{ $t("animals") }}
 								</router-link>
 							</li>
 						</ul>
 					</li>
 
 					<li class="nav-item">
-						<router-link class="nav-link" :to="{ name: 'profile' }">Мој профил</router-link>
+						<router-link class="nav-link" :to="{ name: 'profile' }">
+							{{ $t("profileView") }}
+						</router-link>
 					</li>
 
 					<li class="nav-item">
-						<router-link class="nav-link" :to="{ name: 'about' }">О нама</router-link>
+						<router-link class="nav-link" :to="{ name: 'about' }">
+							{{ $t("aboutView") }}
+						</router-link>
 					</li>
 				</ul>
 
 				<form class="d-flex mx-lg-0 mx-4" role="search" @submit="search">
 					<div class="input-group">
-						<input type="search" class="form-control" placeholder="Претрага" 
+						<input type="search" class="form-control" :placeholder="$t('searchArtworks')" 
 							   name="searchText" required>
-						<button class="btn btn-light" type="submit">Претражи</button>
+						<button class="btn btn-light" type="submit">
+							{{ $t("search") }}
+						</button>
 					</div>
 				</form>
 			</div>

@@ -1,16 +1,18 @@
 <template>
 	<footer class="text-center mt-auto">
-		<p class="m-0">Copyright 2023, Јана Нишавић и Ђорђе Милановић</p>
-		<p class="m-0">Одсек за софтверско инжењерство Електротехничког факултета Универзитета у Београду</p>
+		<img v-if="$i18n.locale == 'rs'" src="flag-uk.png" height="30" class="float-end d-block me-2 mt-2"
+			 @click="$root.$i18n.locale = 'en'">
+		<img v-if="$i18n.locale == 'en'" src="flag-serbia.png" height="30" class="float-end d-block me-2 mt-2"
+			 @click="$root.$i18n.locale = 'rs'">
+
+		<p class="m-0">{{ $t("copyrightText") }}</p>
+		<p class="m-0">{{ $t("universityText") }}</p>
 	</footer>
 </template>
 
 <script>
 export default {
-	name: "Footer",
-	props: {
-
-	}
+	name: "Footer"
 }
 </script>
 

@@ -1,3 +1,25 @@
 {
-	"title": "Галерија Мака"
+	"title": "Галерија Мака",
+	"indexView": "Почетна страна",
+	"searchView": "Претрага",
+	"artworksView": "Уметничка дела",
+	"artistsView": "Уметници",
+	"profileView": "Мој профил",
+	"aboutView": "О нама",
+	"artistWorks": "Преглед дела",
+	"estimatedPrice": "Процењена цена",
+	"paintings": "Слике",
+	"sculptures": "Скулптуре",
+	"otherArtworks": "Остале уметнине",
+	"humans": "Људи",
+	"animals": "Животиње",
+	"searchArtworks": "Претрага уметнина",
+	"search": "Претражи",
+	"copyrightText": "Copyright 2023, Јана Нишавић и Ђорђе Милановић",
+	"universityText": "Одсек за софтверско инжењерство Електротехничког факултета Универзитета у Београду",
+	"sortBy": "Сортирај по",
+	"artworkNameAscending": "називу уметнине (растуће)",
+	"artworkNameDescending": "називу уметнине (опадајуће)",
+	"artistNameAscending": "имену уметника (растуће)",
+	"artistNameDescending": "имену уметника (опадајуће)"
 }

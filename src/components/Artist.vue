@@ -8,7 +8,9 @@
 			<h4>{{ artist.name }}</h4>
 			<p>{{ artist.biography }}</p>
 
-			<button type="button" class="btn btn-light ms-auto">Преглед дела</button>
+			<button type="button" class="btn btn-light ms-auto">
+				{{ $t("artistsWorks") }}
+			</button>
 		</div>
 	</div>
 </template>
@@ -32,5 +34,4 @@ export default {
 	max-height: 400px;
 	object-fit: contain;
 }
-
 </style>

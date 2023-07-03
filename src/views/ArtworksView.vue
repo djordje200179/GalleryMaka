@@ -3,14 +3,31 @@
 	<div class="d-flex">
 		<div class="dropdown ms-auto mt-1 mb-3 me-3">
 			<button class="btn btn-light dropdown-toggle mt-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    			Сортирање
-  				</button>
-		<ul class="dropdown-menu">
-			<li><button class="dropdown-item" type="button" @click="sortArtworksByNameAscending">Назив уметнине растуће</button></li>
-			<li><button class="dropdown-item" type="button" @click="sortArtworksByNameDescending">Назив уметнине опадајуће</button></li>
-			<li><button class="dropdown-item" type="button" @click="sortArtworksByArtistAscending">Назив уметника растуће</button></li>
-			<li><button class="dropdown-item" type="button" @click="sortArtworksByArtistDescending">Назив уметника опадајуће</button></li>
-		</ul>
+    			{{ $t("sortBy") }}
+			</button>
+
+			<ul class="dropdown-menu">
+				<li>
+					<button class="dropdown-item" type="button" @click="sortArtworksByNameAscending">
+						{{ $t("artworkNameAscending") }}
+					</button>
+				</li>
+				<li>
+					<button class="dropdown-item" type="button" @click="sortArtworksByNameDescending">
+						{{ $t("artworkNameDescending") }}
+					</button>
+				</li>
+				<li>
+					<button class="dropdown-item" type="button" @click="sortArtworksByArtistAscending">
+						{{ $t("artistNameAscending") }}
+					</button>
+				</li>
+				<li>
+					<button class="dropdown-item" type="button" @click="sortArtworksByArtistDescending">
+						{{ $t("artistNameDescending") }}
+					</button>
+				</li>
+			</ul>
 		</div>
 	</div>
 	

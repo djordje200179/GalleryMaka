@@ -1,3 +1,25 @@
 {
-	"title": "Gallery Maka"
+	"title": "Gallery Maka",
+	"indexView": "Main page",
+	"searchView": "Search",
+	"artworksView": "Artworks",
+	"artistsView": "Artists",
+	"profileView": "My profile",
+	"aboutView": "About us",
+	"artistsWorks": "Artists' works",
+	"estimatedPrice": "Estimated price",
+	"paintings": "Paintings",
+	"sculptures": "Sculptures",
+	"otherArtworks": "Other artworks",
+	"humans": "Humans",
+	"animals": "Animals",
+	"searchArtworks": "Search artworks",
+	"search": "Search",
+	"copyrightText": "Copyright 2023, Jana Nišavić & Đorđe Milanović",
+	"universityText": "Software Engineering, Faculty of Electrical Engineering, University of Belgrade",
+	"sortBy": "Sort by",
+	"artworkNameAscending": "artwork name (ascending)",
+	"artworkNameDescending": "artwork name (descending)",
+	"artistNameAscending": "artist name (ascending)",
+	"artistNameDescending": "artist name (descending)"
 }
