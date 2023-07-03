@@ -9,6 +9,7 @@
 	"aboutView": "О нама",
 	"artistWorks": "Преглед дела",
 	"estimatedPrice": "Процењена цена",
+	"creationYear": "Година настанка",
 	"paintings": "Слике",
 	"sculptures": "Скулптуре",
 	"otherArtworks": "Остале уметнине",
@@ -22,5 +23,18 @@
 	"artworkNameAscending": "називу уметнине (растуће)",
 	"artworkNameDescending": "називу уметнине (опадајуће)",
 	"artistNameAscending": "имену уметника (растуће)",
-	"artistNameDescending": "имену уметника (опадајуће)"
+	"artistNameDescending": "имену уметника (опадајуће)",
+	"aboutAuthor": "О аутору",
+	"galleryOfImages": "Галерија фотографија",
+	"receivedOffers": "Приспеле понуде",
+	"user": "Корисник",
+	"amount": "Износ",
+	"giveYourOffer": "Дајте Вашу понуду",
+	"submitOffer": "Постави понуду",
+	"yourOfferWasSubmitted": "Ваша понуда је успешно послата!",
+	"comments": "Коментари",
+	"comment": "Коментар",
+	"enterYourComment": "Унесите Ваш коментар",
+	"sendComment": "Постави коментар",
+	"yourCommentWasPosted": "Ваш коментар је успешно постављен!"
 }

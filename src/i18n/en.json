@@ -9,6 +9,7 @@
 	"aboutView": "About us",
 	"artistsWorks": "Artists' works",
 	"estimatedPrice": "Estimated price",
+	"creationYear": "Year of creation",
 	"paintings": "Paintings",
 	"sculptures": "Sculptures",
 	"otherArtworks": "Other artworks",
@@ -22,5 +23,18 @@
 	"artworkNameAscending": "artwork name (ascending)",
 	"artworkNameDescending": "artwork name (descending)",
 	"artistNameAscending": "artist name (ascending)",
-	"artistNameDescending": "artist name (descending)"
+	"artistNameDescending": "artist name (descending)",
+	"aboutAuthor": "About author",
+	"galleryOfImages": "Gallery of images",
+	"receivedOffers": "Received offers",
+	"user": "User",
+	"amount": "Amount",
+	"giveYourOffer": "Give your offer",
+	"submitOffer": "Submit offer",
+	"yourOfferWasSubmitted": "Your offer was submitted!",
+	"comments": "Comments",
+	"comment": "Comment",
+	"enterYourComment": "Enter your comment",
+	"sendComment": "Send comment",
+	"yourCommentWasPosted": "Your comment was posted!"
 }

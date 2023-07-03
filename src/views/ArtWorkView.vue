@@ -8,16 +8,23 @@
 			</div>
 			
 			<div class="col-lg-8 mt-2 mt-lg-0">
-				<h4 class="text-center">О аутору {{ artist.name }}</h4>
+				<h4 class="text-center">
+					{{ $t("aboutAuthor") }} {{ artist.name }}
+				</h4>
+
 				<p>{{artist.biography}}</p>
 			
 				<hr />
 
 				<div class="d-flex bd-highlight">
 					<div class="flex-grow-1">
-						<small class="text-muted">Процењена вредност: {{ artwork.price }}</small>
+						<small class="text-muted">
+							{{ $t("estimatedPrice") }}: {{ artwork.price }}
+						</small>
 						<br/>
-						<small class="text-muted">Година настанка: {{ artwork.year }}</small>
+						<small class="text-muted">
+							{{ $t("creationYear") }}: {{ artwork.year }}
+						</small>
 					</div>
 					
 					<button type="button" class="btn btn-light ms-auto">Преглед дела</button>
@@ -26,7 +33,9 @@
 		</div>
 	</div>
 
-	<h1 class="display-6 mt-3 mb-1 text-white text-center">Галерија</h1>
+	<h1 class="display-6 mt-3 mb-1 text-white text-center">
+		{{ $t("galleryOfImages") }}
+	</h1>
 	<div id="image-gallery" class="carousel slide mx-auto" data-bs-ride="true">
 		<div class="carousel-inner">
 			<div v-for="(image, index) in artwork.gallery" :key="image.id" 
@@ -43,12 +52,14 @@
 		</button>
 	</div>
 	
-	<h1 class="display-6 mt-3 mb-1 text-white text-center">Приспеле понуде</h1>
+	<h1 class="display-6 mt-3 mb-1 text-white text-center">
+		{{ $t("receivedOffers") }}
+	</h1>
 	<table class="table table-dark mx-auto text-center shrinked-element">
 		<thead>
 			<tr>
-				<th scope="col">Корисник</th>
-				<th scope="col">Износ</th>
+				<th scope="col">{{ $t("user") }}</th>
+				<th scope="col">{{ $t("amount") }}</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -59,21 +70,23 @@
 		</tbody>
 	</table>
 	<form class="input-group shrinked-element mx-auto my-2" @submit="addBid">
-		<input type="text" class="form-control" placeholder="Дајте вашу понуду"
+		<input type="text" class="form-control" :placeholder="$t('giveYourOffer')"
 			   name="offerAmount" required>
-		<button class="btn btn-light">Постави понуду</button>
+		<button class="btn btn-light">{{ $t("submitOffer") }}</button>
 	</form>
 	<div v-if="offerSubmitted" class="alert alert-success fade show shrinked-element mx-auto"
 		 @click="offerSubmitted = false" role="alert">
-		Ваша понуда је успешно послата!
+		{{ $t("yourOfferWasSubmitted") }}
 	</div>
 	
-	<h1 class="display-6 mt-3 mb-1 text-white text-center">Коментари</h1>
+	<h1 class="display-6 mt-3 mb-1 text-white text-center">
+		{{ $t("comments") }}
+	</h1>
 	<table class="table table-dark mx-auto text-center shrinked-element">
 		<thead>
 			<tr>
-				<th scope="col">Корисник</th>
-				<th scope="col">Коментар</th>
+				<th scope="col">{{ $t("user") }}</th>
+				<th scope="col">{{ $t("comment") }}</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -84,13 +97,13 @@
 		</tbody>
 	</table>
 	<form class="input-group shrinked-element mx-auto my-2" @submit="addComment">
-		<input type="text" class="form-control" placeholder="Унесите ваш коментар"
+		<input type="text" class="form-control" :placeholder="$t('enterYourComment')"
 			   name="commentText" required>
-		<button class="btn btn-light">Постави коментар</button>
+		<button class="btn btn-light">{{ $t("sendComment") }}</button>
 	</form>
 	<div v-if="commentPosted" class="alert alert-success fade show shrinked-element mx-auto"
 		 @click="commentPosted = false" role="alert">
-		Ваш коментар је успешно постављен!
+		{{ $t("yourCommentWasPosted") }}
 	</div>
 </template>
 
