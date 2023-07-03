@@ -18,6 +18,8 @@
 	</div>
 </template>
 
+
+
 <script>
 import artists from "../artists.json";
 import Artist from "../components/Artist.vue";

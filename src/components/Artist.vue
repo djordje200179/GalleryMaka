@@ -29,6 +29,7 @@ export default {
 
 .row img {
 	max-width: 100%;
+	max-height: 400px;
 	object-fit: contain;
 }
 

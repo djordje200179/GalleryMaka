@@ -258,5 +258,47 @@
 				"comment": "I agree with Jone"
 			}
 		]
+	},
+	{
+		"title": "Alexander the Great",
+		"artist": "Rachel Harisson",
+		"category": "sculptures",
+		"year": 2006,
+		"price": 30000,
+		"thumbnail": "https://media.timeout.com/images/105757844/1024/768/image.jpg",
+		"gallery":[
+			{
+				"id":1, 
+				"link": "https://whitneymedia.org/assets/image/822227/large_RH1102_a_crop.jpg"
+			}, 
+			{
+				"id":2, 
+				"link":"https://www.moma.org/media/W1siZiIsIjE2NTQ1NCJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg?sha=b9b418c56e61ddc3"
+			}
+		],
+		"bids": [
+			{
+				"id": 1,
+				"bidder": "John Doe",
+				"amount": 1000000
+			},
+			{
+				"id": 2,
+				"bidder": "Jane Doe",
+				"amount": 2000000
+			}
+		],
+		"comments": [
+			{
+				"id": 1,
+				"commenter": "John Doe",
+				"comment": "This is a very nice painting"
+			},
+			{
+				"id": 2,
+				"commenter": "Jane Doe",
+				"comment": "I agree with Jone"
+			}
+		]
 	}
 ]

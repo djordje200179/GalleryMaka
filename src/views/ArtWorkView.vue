@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row my-2 rounded p-4">
 			<div class="col-lg-4">
-				<img class="mx-auto d-block rounded" :src="artwork.thumbnail" :alt="artwork.name">
+				<img class="mx-auto d-block rounded" :src="artwork.thumbnail" :alt="artwork.name" id="art_image">
 			</div>
 			
 			<div class="col-lg-8 mt-2 mt-lg-0">
@@ -154,8 +154,17 @@ export default {
 	max-width: 600px;
 }
 
+#image-gallery img{
+	max-width: 100%;
+	max-height: 600px;
+}
+
 .shrinked-element {
 	min-width: 400px;
 	max-width: 60%;
+}
+#art_image{
+	max-width: 100%;
+	max-height: 500px;
 }
 </style>
