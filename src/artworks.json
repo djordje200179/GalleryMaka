@@ -5,7 +5,14 @@
 		"category": "paintings",
 		"year": 1889,
 		"price": 1000000,
-		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+		"gallery":[{
+			"id":1, "link": "https://cdn.kastatic.org/ka-perseus-images/b6e662b4efcd6c53bf80c73259d46c20c0bd2961.jpg"
+		}, {
+			"id":2, "link":"https://upload.wikimedia.org/wikipedia/commons/2/23/Starry-night-in-moma-gallery.jpg"
+		}, {
+			"id":3, "link":"https://th-thumbnailer.cdn-si-edu.com/1G_5HsjRKwBpgSTymPMALv4-r_Q=/1000x750/filters:no_upscale():focal(2409x1653:2410x1654)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/f3/fa/f3fa8097-4f45-4555-96de-a6cc736e6587/van_gogh_angle1_starry_night_300dpi.jpg"
+		}]
 	}, 
 	{
 		"title": "The Scream",
@@ -28,7 +35,12 @@
 		"category": "paintings",
 		"year": 1931,
 		"price": 1500000,
-		"thumbnail": "https://uploads6.wikiart.org/images/salvador-dali/the-persistence-of-memory-1931.jpg!Large.jpg"
+		"thumbnail": "https://uploads6.wikiart.org/images/salvador-dali/the-persistence-of-memory-1931.jpg!Large.jpg",
+		"gallery":[{
+			"id":1, "link": "https://www.1st-art-gallery.com/cdn-cgi/image/format=webp,quality=85,width=840/media/magefan_blog/apartment-1835482_960_720_3.jpg"
+		}, {
+			"id":2, "link":"https://www.dalipaintings.com/images/persistence-of-memory-photo.jpg"
+		}]
 	},
 	{
 		"title": "The Last Supper",
@@ -36,23 +48,37 @@
 		"category": "paintings",
 		"year": 1495,
 		"price": 2000000,
-		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/4/4b/%C3%9Altima_Cena_-_Da_Vinci_5.jpg"
-	},
-
-	{
-		"title": "Venus of Willendorf",
-		"artist": "Unknown",
-		"category": "sculptures",
-		"year": -28000,
-		"price": 1000000,
-		"thumbnail": "https://images.ctfassets.net/cnu0m8re1exe/6wt1O7yX5Dnkbl0Ebev3ML/e9223a13168512f18f4f7efd5b8fef3a/1200px-Venus_of_Willendorf_-_All_sides.png"
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/4/4b/%C3%9Altima_Cena_-_Da_Vinci_5.jpg",
+		"gallery":[{
+			"id":1, "link": "https://static.standard.co.uk/s3fs-public/thumbnails/image/2020/05/22/16/19.-ra-collection-gallery-2-c.-james-harris-0.jpg?width=1024&auto=webp&quality=50&crop=968%3A645%2Csmart"
+		}, {
+			"id":2, "link":"https://d1inegp6v2yuxm.cloudfront.net/royal-academy/image/upload/c_limit,cs_tinysrgb,dn_72,dpr_1.3,f_auto,fl_progressive.keep_iptc,w_650/lyffar7uxphafsracbfo.jpg"
+		}]
 	},
 	{
-		"title": "Bust of Nefertiti",
-		"artist": "Unknown",
+		"title": "David",
+		"artist": "Michelangelo",
 		"category": "sculptures",
-		"year": -1345,
-		"price": 1200000,
-		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Nofretete_Neues_Museum.jpg"
+		"year": 1501,
+		"price": 5000000,
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/8/80/Michelangelo%27s_David_-_right_view_2.jpg",
+		"gallery":[{
+			"id":1, "link": "https://upload.wikimedia.org/wikipedia/commons/1/15/David_by_Michelangelo_at_Florence_Nevit_Dilmen.png"
+		}, {
+			"id":2, "link":"https://upload.wikimedia.org/wikipedia/commons/b/b5/%27David%27_by_Michelangelo_JBU14.JPG"
+		}]
+	},
+	{
+		"title": "Pieta",
+		"artist": "Michelangelo",
+		"category": "sculptures",
+		"year": 1497,
+		"price": 3000000,
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Michelangelo%27s_Pieta_5450_cropncleaned_edit.jpg",
+		"gallery":[{
+			"id":1, "link": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Piet%C3%A0_by_Michelangelo%2C_St._Peter%27s_Basilica_%2832746521038%29.jpg"
+		}, {
+			"id":2, "link":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Plaster_cast_of_the_Pieta_of_Michelangelo%2C_Museo_dell%27Opera_del_Duomo%2C_Florence%2C_223886.jpg/1199px-Plaster_cast_of_the_Pieta_of_Michelangelo%2C_Museo_dell%27Opera_del_Duomo%2C_Florence%2C_223886.jpg?20220809134127"
+		}]
 	}
 ]

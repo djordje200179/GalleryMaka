@@ -47,5 +47,12 @@
 		"artworks":["Flying Horse", "Mentally Free"],
 		"category":"animal",
 		"thumbnail":"https://www.telegraph.co.uk/multimedia/archive/01208/Cholla-2_1208326c.jpg?imwidth=960"
+	},
+	{
+		"name": "Michelangelo",
+		"biography":"Био је италијански ренесансни вајар, сликар, архитекта и песник, један од најзнаменитијих и најутицајнијих умјетника историје европске умјетности. За вријеме живота већ је био сматран највећим умјетником свога времена, а од тада па до данас једним од највећих умјетника свих времена. Велики број његових дјела из сликарства, вајарства и архитектуре су међу најпознатијим у историји умјетности. Фреске таванице Сикстинске капеле у Ватикану данас представљају његова најпознатија дјела, иако је Микеланђело себе сматрао вајарем. Рад на више умјетности није био неуобичајен у његово вријеме.",
+		"artworks":["David", "Pieta"],
+		"category":"human",
+		"thumbnail":"https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTLJzfQrP_meFpS4DDrEsIP_Qh5cqfP5Ukg0CAfn-m6tx2IoNzxfdnz2nXY08eHav5uCDiTo-eLYbyP8b4"
 	}
 ]

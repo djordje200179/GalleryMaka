@@ -32,15 +32,10 @@
 	<div class="d-flex">
 		<div id="carouselExampleRide" class="carousel slide ms-auto me-auto" data-bs-ride="true">
 			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img :src="artwork.gallery[0].link" class="d-block w-100" alt="...">
+				<div v-for="(art,index) in artwork.gallery" :key="art.id" :class="'carousel-item ' + (index==0? 'active':'')">
+					<img :src="art.link" class="d-block w-100" alt="art.link">
 				</div>
-				<div class="carousel-item">
-					<img :src="artwork.gallery[1].link" class="d-block w-100" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img :src="artwork.gallery[2].link" class="d-block w-100" alt="...">
-				</div>
+				
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -121,7 +116,7 @@
 
 	<div class="d-flex justify-content-center">
 		<div class="form-floating mb-3 me-3 flex-grow-2">
-			<input type="text" class="form-control bg-secondary" id="floatingInput" placeholder="jeca123" v-model="username">
+			<input type="text" class="form-control bg-secondary" id="floatingInput" placeholder="jeca123" v-model="username_comment">
 			<label for="floatingInput">Korisničko ime</label>
 		</div>
 		<div class="form-floating ms-3">
@@ -156,6 +151,10 @@
 	#comment{
 		max-width: 70%;
 	}
+	img{
+		max-width: 500px;
+		max-height: 500px;
+	}
 
 	
 </style>
@@ -171,7 +170,7 @@ export default {
 	data(){
 		return {
 			artwork:"", artist:"", bids:"", username:"", amount:"",//bids ima polja: amount, bidder, id (zbog key)
-			comments:[] 
+			comments:[], username_comment:""
 		}
 	},
 	created(){
@@ -214,19 +213,19 @@ export default {
 			if(!this.username || !this.amount)
 				return;
 			let next_id = localStorage.getItem("bids_" + this.artwork.title + "_id");
-			localStorage.setItem("bids_" + this.artwork.title + "_id", next_id + 1);
+			localStorage.setItem("bids_" + this.artwork.title + "_id", parseInt(next_id) + 1);
 
 			let new_offer = {id:next_id, bidder:this.username, amount:this.amount};
 			this.bids.push(new_offer);
 			localStorage.setItem("bids_" + this.artwork.title, JSON.stringify(this.bids));
 		},
 		add_comment(){
-			if(!this.username || !this.new_comment)
+			if(!this.username_comment || !this.new_comment)
 				return;
 			let next_id = localStorage.getItem("comments_" + this.artwork.title + "_id");
-			localStorage.setItem("comments_" + this.artwork.title + "_id", next_id + 1);
+			localStorage.setItem("comments_" + this.artwork.title + "_id", parseInt(next_id) + 1);
 
-			let new_offer = {id:next_id, username:this.username, comment:this.new_comment};
+			let new_offer = {id:next_id, username:this.username_comment, comment:this.new_comment};
 			this.comments.push(new_offer);
 			localStorage.setItem("comments_" + this.artwork.title, JSON.stringify(this.comments));
 		}
