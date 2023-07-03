@@ -2,23 +2,21 @@
 
 	<div class="d-flex">
 		<div class="dropdown ms-auto mt-1 mb-3 me-3 ">
-			<button class="btn btn-light dropdown-toggle mt-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<button class="btn btn-light dropdown-toggle mt-1" type="button" data-bs-toggle="dropdown">
     			Сортирање
-  				</button>
+			</button>
 		<ul class="dropdown-menu">
-			<li><button class="dropdown-item" type="button" @click="currentArtists = artistsByNameUp">Називу растуће</button></li>
-			<li><button class="dropdown-item" type="button" @click="currentArtists = artistsByNameDown">Називу опадајуће</button></li>
+			<li><button class="dropdown-item" type="button" @click="sortArtistsByNameAscending">Називу растуће</button></li>
+			<li><button class="dropdown-item" type="button" @click="sortArtistsByNameDescending">Називу опадајуће</button></li>
 		</ul>
 		</div>
 	</div>
 	
 
 	<div class="container">
-			<Artist class="pb-3" v-for="artist in currentArtists" :key="artist.name" :artist="artist" />
+		<Artist class="pb-3" v-for="artist in artists" :key="artist.name" :artist="artist" />
 	</div>
 </template>
-
-
 
 <script>
 import artists from "../artists.json";
@@ -29,35 +27,18 @@ export default {
 	components: {
 		Artist
 	},
-	created(){
-		this.currentArtists = this.categoryArtists;
-	},
 	data() {
 		return{
-			currentArtists:this.categoryArtists
+			artists: artists.filter(artists => artists.category === this.$route.params.category)
 		}
-	}, 
-	computed: {
-		allArtists() {
-			return artists;
+	},
+	methods: {
+		sortArtistsByNameAscending() {
+			this.artists.sort((first, second) => first.name <= second.name ? -1 : 1);
 		},
-		categoryArtists() {
-			return artists.filter(artists => artists.category === this.$route.params.category);
-		},
-		artistsByNameUp() {
-			return artists.sort(cmpFunctionByAristsUp).filter(artists => artists.category === this.$route.params.category);
-		},
-		artistsByNameDown() {
-			return artists.sort(cmpFunctionByAristsDown).filter(artists => artists.category === this.$route.params.category);
+		sortArtistsByNameDescending() {
+			this.artists.sort((first, second) => first.name >= second.name ? -1 : 1);
 		}
 	}
 }
-
-function cmpFunctionByAristsUp(first, second){
-		return first.name <= second.name ? -1 : 1;
-}
-function cmpFunctionByAristsDown(first, second){
-		return first.name >= second.name ? -1 : 1;
-}
-
 </script>
