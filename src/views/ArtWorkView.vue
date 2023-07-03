@@ -132,38 +132,12 @@
 
 </template>
 
-<style>
-	#body{
-		background-color: #8688b0;
-	}
-	#artwork_title{
-		color:white
-	}
-	
-	#carouselExampleRide{
-		max-height: 500px;
-		max-width: 500px;
-	}
-
-	.table{
-		max-width: 70%;
-	}
-	#comment{
-		max-width: 70%;
-	}
-	img{
-		max-width: 500px;
-		max-height: 500px;
-	}
-
-	
-</style>
-
 <script>
 import artworks from "../artworks.json";
 import artists from "../artists.json";
+
 export default {
-	name: "Artwork",
+	name: "ArtworkView",
 	props: {
 		artwork: Object
 	},
@@ -238,6 +212,30 @@ function cmpFunctionByAmount(first, second){
 </script>
 
 <style scoped>
+#body{
+	background-color: #8688b0;
+}
+
+#artwork_title{
+	color:white
+}
+
+#carouselExampleRide{
+	max-height: 500px;
+	max-width: 500px;
+}
+
+.table{
+	max-width: 70%;
+}
+#comment{
+	max-width: 70%;
+}
+img{
+	max-width: 500px;
+	max-height: 500px;
+}
+
 .card > img {
 	height: 200px;
 	object-fit: contain;

@@ -1,12 +1,12 @@
 <template>
-    O nama
+	Index
 </template>
 
 <script>
 export default {
-    name: 'About',
-    components: {
+	name: "IndexView",
+	components: {
   
-    }
+	}
 }
 </script>

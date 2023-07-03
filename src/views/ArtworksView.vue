@@ -28,7 +28,7 @@ import artworks from "../artworks.json";
 import Artwork from "../components/Artwork.vue";
 
 export default {
-	name: "Artworks",
+	name: "ArtworksView",
 	components: {
 		Artwork
 	},

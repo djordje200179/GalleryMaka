@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar navbar-expand-lg navbar-light" id="header">
+	<nav class="navbar navbar-expand-lg navbar-light">
 		<div class="container-fluid">
 			<router-link class="navbar-brand" :to="{ name: 'index' }">
 				<img src="icon.png" height="30" class="d-inline-block align-text-top">
@@ -17,19 +17,21 @@
 							Уметнине
 						</a>
 
-						<ul class="dropdown-menu" >
+						<ul class="dropdown-menu">
 							<li>
-								<router-link class="dropdown-item" :to="{ name: 'artworks', params: { category: 'paintings'} }">
+								<router-link class="dropdown-item"
+									:to="{ name: 'artworks', params: { category: 'paintings' } }">
 									Слике
 								</router-link>
 							</li>
 							<li>
-								<router-link class="dropdown-item" :to="{ name: 'artworks', params: { category: 'sculptures'} }">
+								<router-link class="dropdown-item"
+									:to="{ name: 'artworks', params: { category: 'sculptures' } }">
 									Скулптуре
 								</router-link>
 							</li>
 							<li>
-								<router-link class="dropdown-item" :to="{ name: 'artworks', params: { category: 'other'} }">
+								<router-link class="dropdown-item" :to="{ name: 'artworks', params: { category: 'other' } }">
 									Остале уметнине
 								</router-link>
 							</li>
@@ -41,14 +43,14 @@
 							Уметници
 						</a>
 
-						<ul class="dropdown-menu" >
+						<ul class="dropdown-menu">
 							<li>
-								<router-link class="dropdown-item" :to="{ name: 'artists', params: { category: 'human'} }">
+								<router-link class="dropdown-item" :to="{ name: 'artists', params: { category: 'human' } }">
 									Људи
 								</router-link>
 							</li>
 							<li>
-								<router-link class="dropdown-item" :to="{ name: 'artists', params: { category: 'animal'} }">
+								<router-link class="dropdown-item" :to="{ name: 'artists', params: { category: 'animal' } }">
 									Животиње
 								</router-link>
 							</li>
@@ -75,21 +77,16 @@
 	</nav>
 </template>
 
-<style>
-	#header{
-		background-color: #8688b0;
-	}
-</style>
-
 <script>
 export default {
+	name: "Header",
 	methods: {
 		search(event) {
 			event.preventDefault();
 
 			const formData = new FormData(event.target);
 			const searchText = formData.get("searchText");
-			
+
 			this.$router.push({ name: "search", params: { query: searchText } });
 		}
 	}
@@ -97,5 +94,7 @@ export default {
 </script>
 
 <style scoped>
-
+nav {
+	background-color: #8688b0;
+}
 </style>

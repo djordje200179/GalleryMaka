@@ -1,46 +1,46 @@
-import Index from "./views/Index.vue";
-import Search from "./views/Search.vue";
-import About from "./views/About.vue";
-import Artworks from "./views/Artworks.vue";
-import Artists from "./views/Artists.vue";
-import Profile from "./views/Profile.vue";
-import ArtWorkView from "./views/ArtWorkView.vue";
+import IndexView from "./views/IndexView.vue";
+import SearchView from "./views/SearchView.vue";
+import AboutView from "./views/AboutView.vue";
+import ArtworksView from "./views/ArtworksView.vue";
+import ArtistsView from "./views/ArtistsView.vue";
+import ProfileView from "./views/ProfileView.vue";
+import ArtworkView from "./views/ArtWorkView.vue";
 
 export default [
 	{ 
         path: "/",
         name: "index",
-        component: Index
+        component: IndexView
     },
     {
         path: "/search/:query",
         name: "search",
-        component: Search,
+        component: SearchView
     },
     {
         path: "/artworks/:category",
         name: "artworks",
-        component: Artworks
+        component: ArtworksView
     },
     ,
     {
         path: "/artwork/:name",
-        name: "current_artwork",
-        component: ArtWorkView
+        name: "artwork",
+        component: ArtworkView
     },
     {
         path: "/artists/:category",
         name: "artists",
-        component: Artists
+        component: ArtistsView
     },
     {
         path: "/profile",
         name: "profile",
-        component: Profile
+        component: ProfileView
     },
     {
         path: "/about",
         name: "about",
-        component: About
+        component: AboutView
     }
 ];

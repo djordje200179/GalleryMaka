@@ -23,7 +23,7 @@ import artists from "../artists.json";
 import Artist from "../components/Artist.vue";
 
 export default {
-	name: "Artists",
+	name: "ArtistsView",
 	components: {
 		Artist
 	},

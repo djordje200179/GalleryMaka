@@ -9,17 +9,11 @@
 			</div>
 
 			<div class="card-footer">
-				<small class="text-muted">Procenjena vrednost: {{ artwork.price }}</small>
+				<small class="text-muted">Процењена вредност: {{ artwork.price }}</small>
 			</div>
 		</div>
 	</div>
 </template>
-
-<style>
-	#body{
-		background-color: #8688b0;
-	}
-</style>
 
 <script>
 export default {
@@ -31,8 +25,12 @@ export default {
 </script>
 
 <style scoped>
-.card > img {
+.card>img {
 	height: 200px;
 	object-fit: cover;
+}
+
+.card-body {
+	background-color: #8688b0;
 }
 </style>

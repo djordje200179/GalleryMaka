@@ -1,19 +1,12 @@
 <template>
 	<Header />
-	
-	<main class="px-1" id="main">
-		<router-view :key="$route.fullPath"/>
+
+	<main class="px-1">
+		<router-view :key="$route.fullPath" />
 	</main>
 
 	<Footer />
 </template>
-
-<style>
-	#main{
-		background-color: #272947;
-		min-height: 100vh;
-	}
-</style>
 
 <script>
 import Header from "@/components/Header.vue";
@@ -29,5 +22,7 @@ export default {
 </script>
 
 <style scoped>
-
+main {
+	background-color: #272947;
+}
 </style>

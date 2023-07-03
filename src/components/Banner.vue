@@ -6,6 +6,7 @@
 
 <script>
 export default {
+	name: "Banner",
 	props: {
 
 	}
@@ -13,7 +14,7 @@ export default {
 </script>
 
 <style scoped>
-	aside {
-		width: 200px;
-	}
+aside {
+	width: 200px;
+}
 </style>
