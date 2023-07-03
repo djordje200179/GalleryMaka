@@ -8,7 +8,7 @@
 			<h4>{{ artist.name }}</h4>
 			<p>{{ artist.biography }}</p>
 
-			<button type="button" class="btn btn-light ms-auto">
+			<button type="button" class="btn btn-light ms-auto" @click="generateWorksDocument">
 				{{ $t("artistsWorks") }}
 			</button>
 		</div>
@@ -16,10 +16,21 @@
 </template>
 
 <script>
+import { jsPDF } from "jspdf";
+
 export default {
 	name: "Artist",
 	props: {
 		artist: Object
+	},
+	methods: {
+		generateWorksDocument() {
+			const doc = new jsPDF();
+			
+			this.artist.artworks.forEach((artwork, i) => doc.text(artwork, 10, (i + 1) * 10));
+
+			doc.save(`${this.artist.name}.pdf`);
+		}
 	}
 }
 </script>
