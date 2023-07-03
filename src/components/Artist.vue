@@ -6,7 +6,7 @@
 		
 		<div class="col-md-8">
 			<h4>{{ artist.name }}</h4>
-			<p class="card-text">{{ artist.biography }}</p>
+			<p>{{ artist.biography }}</p>
 
 			<button type="button" class="btn btn-light ms-auto">Преглед дела</button>
 		</div>

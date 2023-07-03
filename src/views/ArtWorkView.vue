@@ -3,28 +3,31 @@
 		<h1 class="display-5 font-weight-bold" id="artwork_title">{{artwork.title}}</h1>
 	</div>
 	
-	<div class="container p-3">
-		<div class="row ">
-
-			<div class=" card col-md-4 art">
-				<img :src="artwork.thumbnail" class="img-fluid rounded-start mt-3 mb-1" alt="...">
+	<div class="container">
+		<div class="row my-2 rounded p-4">
+			<div class="col-md-4">
+				<img class="mx-auto d-block rounded" :src="artwork.thumbnail" :alt="artwork.name">
 			</div>
-			<div class="col-md-8 card art">
-				<div class="card-body art">
-					<h5 class="card-title">O autoru: {{ artist.name }}</h5>
-					<p class="card-text">{{artist.biography}}</p>
-				
-					<div class="card-footer">
-						<small class="text-muted">Procenjena vrednost: {{ artwork.price }}</small>
+			
+			<div class="col-md-8">
+				<h4>О аутору {{ artist.name }}</h4>
+				<p>{{artist.biography}}</p>
+			
+				<hr />
+
+				<div class="d-flex bd-highlight">
+					<div class="flex-grow-1">
+						<small class="text-muted">Процењена вредност: {{ artwork.price }}</small>
+						<br/>
+						<small class="text-muted">Година настанка: {{ artwork.year }}</small>
 					</div>
-					<div class="card-footer">
-						<small class="text-muted">Godina nastanka: {{ artwork.year }}</small>
-					</div>
-				</div>
+					
+					<button type="button" class="btn btn-light ms-auto">Преглед дела</button>
+				</div>		
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="text-center p-1">
 		<h1 class="display-6" id="artwork_title">Galerija</h1>
 	</div>
@@ -212,6 +215,19 @@ function cmpFunctionByAmount(first, second){
 </script>
 
 <style scoped>
+.row {
+	background-color: #8688b0;
+}
+
+.row img {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+
+
+
+
 #body{
 	background-color: #8688b0;
 }
