@@ -26,7 +26,7 @@
 		</div>
 	</div>
 
-	<h1 class="display-6 my-2 text-white text-center">Галерија</h1>
+	<h1 class="display-6 mt-3 mb-1 text-white text-center">Галерија</h1>
 	<div id="image-gallery" class="carousel slide mx-auto" data-bs-ride="true">
 		<div class="carousel-inner">
 			<div v-for="(image, index) in artwork.gallery" :key="image.id" 
@@ -43,8 +43,8 @@
 		</button>
 	</div>
 	
-	<h1 class="display-6 my-2 text-white text-center">Приспеле понуде</h1>
-	<table class="table table-dark mx-auto my-0 text-center shrinked-element rounded overflow-hidden">
+	<h1 class="display-6 mt-3 mb-1 text-white text-center">Приспеле понуде</h1>
+	<table class="table table-dark mx-auto text-center shrinked-element">
 		<thead>
 			<tr>
 				<th scope="col">Корисник</th>
@@ -64,8 +64,8 @@
 		<button class="btn btn-light">Постави понуду</button>
 	</form>
 	
-	<h1 class="display-6 my-2 text-white text-center">Коментари</h1>
-	<table class="table table-dark mx-auto my-0 text-center shrinked-element rounded overflow-hidden">
+	<h1 class="display-6 mt-3 mb-1 text-white text-center">Коментари</h1>
+	<table class="table table-dark mx-auto text-center shrinked-element">
 		<thead>
 			<tr>
 				<th scope="col">Корисник</th>
@@ -157,15 +157,5 @@ export default {
 .shrinked-element {
 	min-width: 400px;
 	max-width: 60%;
-}
-
-.input-group * {
-	border-top-right-radius: 0 !important;
-	border-top-left-radius: 0 !important;
-}
-
-.table {
-	border-bottom-right-radius: 0 !important;
-	border-bottom-left-radius: 0 !important;
 }
 </style>
