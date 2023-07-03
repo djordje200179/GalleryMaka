@@ -44,7 +44,7 @@
 	</div>
 	
 	<h1 class="display-6 my-2 text-white text-center">Приспеле понуде</h1>
-	<table class="table table-dark mx-auto my-0 text-center shrinked-element">
+	<table class="table table-dark mx-auto my-0 text-center shrinked-element rounded overflow-hidden">
 		<thead>
 			<tr>
 				<th scope="col">Корисник</th>
@@ -65,7 +65,7 @@
 	</form>
 	
 	<h1 class="display-6 my-2 text-white text-center">Коментари</h1>
-	<table class="table table-dark mx-auto my-0 text-center shrinked-element">
+	<table class="table table-dark mx-auto my-0 text-center shrinked-element rounded overflow-hidden">
 		<thead>
 			<tr>
 				<th scope="col">Корисник</th>
@@ -157,5 +157,15 @@ export default {
 .shrinked-element {
 	min-width: 400px;
 	max-width: 60%;
+}
+
+.input-group * {
+	border-top-right-radius: 0 !important;
+	border-top-left-radius: 0 !important;
+}
+
+.table {
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
 }
 </style>
