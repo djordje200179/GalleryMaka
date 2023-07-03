@@ -21,7 +21,7 @@
 	</div>
 
 	<div class="container">
-		<Artist class="pb-3" v-for="artist in artists" :key="artist.name" :artist="artist" />
+		<Artist v-for="artist in artists" :key="artist.name" :artist="artist" />
 	</div>
 </template>
 
