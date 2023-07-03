@@ -40,6 +40,10 @@
 				 class="carousel-item" :class="{active: index == 0}">
 				<img :src="image.link" class="d-block w-100">
 			</div>
+
+			<div class="carousel-item">
+				<iframe width="560" height="315" :src="artwork.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
 		</div>
 
 		<button class="carousel-control-prev" type="button" data-bs-target="#image-gallery" data-bs-slide="prev">
@@ -103,6 +107,8 @@
 		 @click="commentPosted = false" role="alert">
 		{{ $t("yourCommentWasPosted") }}
 	</div>
+
+
 </template>
 
 <script>
