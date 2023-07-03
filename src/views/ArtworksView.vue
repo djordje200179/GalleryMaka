@@ -14,11 +14,11 @@
 		</div>
 	</div>
 	
-
 	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-		
-		<router-link v-for="artwork in currentArtwork" :key="artwork.title" :to="'/artwork/' + artwork.title" style="text-decoration: none; color: inherit;">
-			<Artwork class="ps-3 pe-3 pb-2"  :artwork="artwork" />
+		<router-link v-for="artwork in currentArtwork" :key="artwork.title" 
+					 class="artwork-link mb-2 px-1 px-2" 
+					 :to=" { name: 'artwork', params: { name: artwork.title} }">
+			<Artwork :artwork="artwork" />
 		</router-link>
 	</div>
 </template>
@@ -75,3 +75,10 @@ function cmpFunctionByArtWorkDown(first, second){
 		return first.title >= second.title ? -1 : 1;
 }
 </script>
+
+<style scoped>
+.artwork-link {
+	text-decoration: none;
+	color: inherit;
+}
+</style>
