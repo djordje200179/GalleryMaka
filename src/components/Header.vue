@@ -68,7 +68,8 @@
 
 				<form class="d-flex mx-lg-0 mx-4" role="search" @submit="search">
 					<div class="input-group">
-						<input type="search" class="form-control" placeholder="Претрага" name="searchText" required>
+						<input type="search" class="form-control" placeholder="Претрага" 
+							   name="searchText" required>
 						<button class="btn btn-light" type="submit">Претражи</button>
 					</div>
 				</form>
