@@ -1,10 +1,10 @@
 <template>
 	<div class="row my-2 rounded p-4">
-		<div class="col-md-4">
+		<div class="col-lg-4">
 			<img class="mx-auto d-block rounded" :src="artist.thumbnail" :alt="artist.name">
 		</div>
 		
-		<div class="col-md-8">
+		<div class="col-lg-8">
 			<h4>{{ artist.name }}</h4>
 			<p>{{ artist.biography }}</p>
 
