@@ -1,7 +1,7 @@
 <template>
 	<Header />
 
-	<main class="px-1">
+	<main class="px-1 flex-grow-1">
 		<router-view :key="$route.fullPath" />
 	</main>
 
