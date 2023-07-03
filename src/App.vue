@@ -17,7 +17,16 @@ export default {
 	components: {
 		Footer,
 		Header,
-	}
+	},
+	watch: {
+        $route: {
+            immediate: true,
+            handler(to, from) {
+				const viewName = to.name + "View";
+                document.title = `${this.$t("title")} - ${this.$t(viewName)}`;
+            }
+        },
+    }
 }
 </script>
 

@@ -2,6 +2,7 @@
 	"title": "Gallery Maka",
 	"indexView": "Main page",
 	"searchView": "Search",
+	"artworkView": "Artwork",
 	"artworksView": "Artworks",
 	"artistsView": "Artists",
 	"profileView": "My profile",
