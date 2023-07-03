@@ -14,6 +14,12 @@
 					<h5 class="card-title">O autoru: {{ artist.name }}</h5>
 					<p class="card-text">{{artist.biography}}</p>
 				
+					<div class="card-footer">
+						<small class="text-muted">Procenjena vrednost: {{ artwork.price }}</small>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">Godina nastanka: {{ artwork.year }}</small>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -23,34 +29,70 @@
 		<h1 class="display-6" id="artwork_title">Galerija</h1>
 	</div>
 
-	<div id="gallery" class="d-flex">
-		<div id="carouselExample" class="carousel slide ms-auto me-auto">
+	<div class="d-flex">
+		<div id="carouselExampleRide" class="carousel slide ms-auto me-auto" data-bs-ride="true">
 			<div class="carousel-inner">
-				<div v-for="pic in artwork.gallery" :key="pic.id" class="carousel-item active">
-					<img :src="pic.link" class="d-block w-100 pic" alt="...">
-				</div>
-
 				<div class="carousel-item active">
-					<video class="img-fluid" autoplay loop muted>
-						<source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
-					</video>
-					<div class="carousel-caption d-none d-md-block">
-						<h5>First slide label</h5>
-						<p>
-						Nulla vitae elit libero, a pharetra augue mollis interdum.
-						</p>
-					</div>
+					<img :src="artwork.gallery[0].link" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img :src="artwork.gallery[1].link" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img :src="artwork.gallery[2].link" class="d-block w-100" alt="...">
 				</div>
 			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
+	</div>
+	
+	<div class="text-center p-1">
+		<h1 class="display-6 mt-3 mb-5" id="artwork_title">Prispele ponude:</h1>
+	</div>
+
+	<div class="d-flex">
+		<table class="table table-dark ms-auto me-auto text-center">
+			<thead>
+				<tr>
+				<th scope="col">Rb</th>
+				<th scope="col">Korisnik</th>
+				<th scope="col">Iznos</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="(bid, index) in offersSortedByAmount" :key="bid.id">
+				<th scope="row">{{ index + 1 }}</th>
+				<td>{{ bid.bidder }}</td>
+				<td>{{ bid.amount }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="text-center p-1">
+		<h1 class="display-6 mt-3 mb-3" id="artwork_title">Postavite svoju ponudu:</h1>
+	</div>
+
+	<div class="d-flex justify-content-center">
+		<div class="form-floating mb-3 me-3">
+			<input type="text" class="form-control bg-secondary" id="floatingInput" placeholder="jeca123" v-model="username">
+			<label for="floatingInput">Korisničko ime</label>
+		</div>
+		<div class="form-floating ms-3">
+			<input type="text" class="form-control bg-secondary" id="floatingPassword" placeholder="17000" v-model="amount">
+			<label for="floatingPassword">Iznos</label>
+		</div>
+	</div>
+
+	<div class="d-flex justify-content-center">
+		<button type="button" class="btn btn-secondary mb-3" @click="add_bid()">Postavi ponudu</button>
 	</div>
 
 	
@@ -64,16 +106,17 @@
 	#artwork_title{
 		color:white
 	}
-	/* #gallery{
-		max-height: 500;
-		max-width: 700px;
-	} */
 	
-	.pic, video{
-		max-width: 500px;
+	#carouselExampleRide{
 		max-height: 500px;
-		object-fit: contain;
+		max-width: 500px;
 	}
+
+	.table{
+		max-width: 70%;
+	}
+
+	
 </style>
 
 <script>
@@ -86,7 +129,7 @@ export default {
 	},
 	data(){
 		return {
-			artwork:"", artist:""
+			artwork:"", artist:"", bids:"", username:"", amount:"" //bids ima polja: amount, bidder, id (zbog key)
 		}
 	},
 	created(){
@@ -94,8 +137,40 @@ export default {
 		this.artwork = artworks.find(element => element.title == this.$route.params.name);
 		this.artist = artists.find(element => element.artworks.find(art => art == this.$route.params.name));
 
+		if(localStorage.getItem("bids_" + this.artwork.title)){
+			this.bids = JSON.parse(localStorage.getItem("bids_" + this.artwork.title));
+		}else{
+			this.bids = [{
+				id:1, bidder:"Petar_Petrovic", amount:15000
+			}, {
+				id:2, bidder:"Janko_Jankovic", amount:16000
+			}];
 
+			localStorage.setItem("bids_" + this.artwork.title + "_id", 3);
+		}
+
+	},
+	computed :{
+		offersSortedByAmount(){
+			return this.bids.sort(cmpFunctionByAmount);
+		}
+	},
+	methods:{
+		add_bid(){
+			if(!this.username || !this.amount)
+				return;
+			let next_id = localStorage.getItem("bids_" + this.artwork.title + "_id");
+			localStorage.setItem("bids_" + this.artwork.title + "_id", next_id + 1);
+
+			let new_offer = {id:next_id, bidder:this.username, amount:this.amount};
+			this.bids.push(new_offer);
+			localStorage.setItem("bids_" + this.artwork.title, JSON.stringify(this.bids));
+		}
 	}
+}
+
+function cmpFunctionByAmount(first, second){
+	return first.amount <= second.amount ? 1 : -1;
 }
 </script>
 
