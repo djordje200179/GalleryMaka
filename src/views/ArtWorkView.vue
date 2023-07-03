@@ -95,6 +95,44 @@
 		<button type="button" class="btn btn-secondary mb-3" @click="add_bid()">Postavi ponudu</button>
 	</div>
 
+	<div class="text-center p-1">
+		<h1 class="display-6 mt-3 mb-3" id="artwork_title">Komentari:</h1>
+	</div>
+
+	<div class="d-flex">
+		<table class="table table-dark ms-auto me-auto text-center">
+			<thead>
+				<tr>
+				<th scope="col">Rb</th>
+				<th scope="col">Korisnik</th>
+				<th scope="col">Komentar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="(comment, index) in comments" :key="comment.id">
+				<th scope="row">{{ index + 1 }}</th>
+				<td>{{ comment.username }}</td>
+				<td>{{ comment.comment }}</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+	<div class="d-flex justify-content-center">
+		<div class="form-floating mb-3 me-3 flex-grow-2">
+			<input type="text" class="form-control bg-secondary" id="floatingInput" placeholder="jeca123" v-model="username">
+			<label for="floatingInput">Korisničko ime</label>
+		</div>
+		<div class="form-floating ms-3">
+			<input type="text" class="form-control bg-secondary" id="floatingPassword" placeholder="17000" v-model="new_comment">
+			<label for="floatingPassword">Tekst komentara</label>
+		</div>
+	</div>
+	<div class="d-flex justify-content-center">
+		<button type="button" class="btn btn-secondary mb-3" @click="add_comment()">Dodaj komentar</button>
+	</div>
+	
 	
 
 </template>
@@ -115,6 +153,9 @@
 	.table{
 		max-width: 70%;
 	}
+	#comment{
+		max-width: 70%;
+	}
 
 	
 </style>
@@ -129,7 +170,8 @@ export default {
 	},
 	data(){
 		return {
-			artwork:"", artist:"", bids:"", username:"", amount:"" //bids ima polja: amount, bidder, id (zbog key)
+			artwork:"", artist:"", bids:"", username:"", amount:"",//bids ima polja: amount, bidder, id (zbog key)
+			comments:[] 
 		}
 	},
 	created(){
@@ -149,6 +191,18 @@ export default {
 			localStorage.setItem("bids_" + this.artwork.title + "_id", 3);
 		}
 
+		if(localStorage.getItem("comments_" + this.artwork.title)){
+			this.bids = JSON.parse(localStorage.getItem("comments_" + this.artwork.title));
+		}else{
+			this.comments = [{
+				id:1, username:"Petar_Petrovic", comment:"Veoma lepo delo."
+			}, {
+				id:2, username:"Janko_Jankovic", comment:"Savršeno."
+			}];
+
+			localStorage.setItem("comments_" + this.artwork.title + "_id", 3);
+		}
+
 	},
 	computed :{
 		offersSortedByAmount(){
@@ -165,6 +219,16 @@ export default {
 			let new_offer = {id:next_id, bidder:this.username, amount:this.amount};
 			this.bids.push(new_offer);
 			localStorage.setItem("bids_" + this.artwork.title, JSON.stringify(this.bids));
+		},
+		add_comment(){
+			if(!this.username || !this.new_comment)
+				return;
+			let next_id = localStorage.getItem("comments_" + this.artwork.title + "_id");
+			localStorage.setItem("comments_" + this.artwork.title + "_id", next_id + 1);
+
+			let new_offer = {id:next_id, username:this.username, comment:this.new_comment};
+			this.comments.push(new_offer);
+			localStorage.setItem("comments_" + this.artwork.title, JSON.stringify(this.comments));
 		}
 	}
 }

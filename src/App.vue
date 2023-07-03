@@ -11,6 +11,7 @@
 <style>
 	#main{
 		background-color: #272947;
+		min-height: 100vh;
 	}
 </style>
 
