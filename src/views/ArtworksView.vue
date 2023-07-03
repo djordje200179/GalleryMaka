@@ -6,16 +6,16 @@
     			Сортирање
   				</button>
 		<ul class="dropdown-menu">
-			<li><button class="dropdown-item" type="button" @click="currentArtwork = artworksByArtWorkNameUp">Назив уметнине растуће</button></li>
-			<li><button class="dropdown-item" type="button" @click="currentArtwork = artworksByArtWorkNameDown">Назив уметнине опадајуће</button></li>
-			<li><button class="dropdown-item" type="button" @click="currentArtwork = artworksByArtistsNameUp">Назив уметника растуће</button></li>
-			<li><button class="dropdown-item" type="button" @click="currentArtwork = artworksByArtistsNameDown">Назив уметника опадајуће</button></li>
+			<li><button class="dropdown-item" type="button" @click="sortArtworksByNameAscending">Назив уметнине растуће</button></li>
+			<li><button class="dropdown-item" type="button" @click="sortArtworksByNameDescending">Назив уметнине опадајуће</button></li>
+			<li><button class="dropdown-item" type="button" @click="sortArtworksByArtistAscending">Назив уметника растуће</button></li>
+			<li><button class="dropdown-item" type="button" @click="sortArtworksByArtistDescending">Назив уметника опадајуће</button></li>
 		</ul>
 		</div>
 	</div>
 	
 	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-		<router-link v-for="artwork in currentArtwork" :key="artwork.title" 
+		<router-link v-for="artwork in artworks" :key="artwork.title" 
 					 class="artwork-link mb-2 px-1 px-2" 
 					 :to=" { name: 'artwork', params: { name: artwork.title} }">
 			<Artwork :artwork="artwork" />
@@ -32,47 +32,25 @@ export default {
 	components: {
 		Artwork
 	},
-	created(){
-		this.currentArtwork = this.categoryArtworks;
-	},
 	data() {
-		return{
-			currentArtwork:this.categoryArtworks
+		return {
+			artworks: artworks.filter(artwork => artwork.category === this.$route.params.category)
 		}
 	}, 
-	computed: {
-		allArtworks() {
-			return artworks;
+	methods: {
+		sortArtworksByNameAscending() {
+			this.artworks.sort((first, second) => first.title <= second.title ? -1 : 1);
 		},
-		categoryArtworks() {
-			return artworks.filter(artwork => artwork.category === this.$route.params.category);
+		sortArtworksByNameDescending() {
+			this.artworks.sort((first, second) => first.title >= second.title ? -1 : 1);
 		},
-		artworksByArtistsNameUp() {
-			return artworks.sort(cmpFunctionByAristsUp).filter(artwork => artwork.category === this.$route.params.category);
+		sortArtworksByArtistAscending() {
+			this.artworks.sort((first, second) => first.artist <= second.artist ? -1 : 1);
 		},
-		artworksByArtistsNameDown() {
-			return artworks.sort(cmpFunctionByAristsDown).filter(artwork => artwork.category === this.$route.params.category);
-		},
-		artworksByArtWorkNameUp() {
-			return artworks.sort(cmpFunctionByArtWorkUp).filter(artwork => artwork.category === this.$route.params.category);
-		},
-		artworksByArtWorkNameDown() {
-			return artworks.sort(cmpFunctionByArtWorkDown).filter(artwork => artwork.category === this.$route.params.category);
+		sortArtworksByArtistDescending() {
+			this.artworks.sort((first, second) => first.artist >= second.artist ? -1 : 1);
 		}
 	}
-}
-
-function cmpFunctionByAristsUp(first, second){
-		return first.artist <= second.artist ? -1 : 1;
-}
-function cmpFunctionByAristsDown(first, second){
-		return first.artist >= second.artist ? -1 : 1;
-}
-function cmpFunctionByArtWorkUp(first, second){
-		return first.title <= second.title ? -1 : 1;
-}
-function cmpFunctionByArtWorkDown(first, second){
-		return first.title >= second.title ? -1 : 1;
 }
 </script>
 
