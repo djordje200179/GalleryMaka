@@ -1,17 +1,16 @@
 <template>
-
 	<div class="d-flex">
-		<div class="dropdown ms-auto mt-1 mb-3 me-3 ">
+		<div class="dropdown ms-auto mt-1 mb-3 me-3">
 			<button class="btn btn-light dropdown-toggle mt-1" type="button" data-bs-toggle="dropdown">
     			Сортирање
 			</button>
-		<ul class="dropdown-menu">
-			<li><button class="dropdown-item" type="button" @click="sortArtistsByNameAscending">Називу растуће</button></li>
-			<li><button class="dropdown-item" type="button" @click="sortArtistsByNameDescending">Називу опадајуће</button></li>
-		</ul>
+			
+			<ul class="dropdown-menu">
+				<li><button class="dropdown-item" type="button" @click="sortArtistsByNameAscending">Називу растуће</button></li>
+				<li><button class="dropdown-item" type="button" @click="sortArtistsByNameDescending">Називу опадајуће</button></li>
+			</ul>
 		</div>
 	</div>
-	
 
 	<div class="container">
 		<Artist class="pb-3" v-for="artist in artists" :key="artist.name" :artist="artist" />
@@ -28,7 +27,7 @@ export default {
 		Artist
 	},
 	data() {
-		return{
+		return {
 			artists: artists.filter(artists => artists.category === this.$route.params.category)
 		}
 	},
