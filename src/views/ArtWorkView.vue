@@ -26,8 +26,6 @@
 							{{ $t("creationYear") }}: {{ artwork.year }}
 						</small>
 					</div>
-					
-					<button type="button" class="btn btn-light ms-auto">Преглед дела</button>
 				</div>		
 			</div>
 		</div>
