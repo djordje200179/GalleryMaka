@@ -1,6 +1,6 @@
 <template>
 	<aside class="bg-dark">
-
+		Banner
 	</aside>
 </template>
 
@@ -15,6 +15,7 @@ export default {
 
 <style scoped>
 aside {
-	width: 200px;
+	min-height: 100px;
+	height: 100%;
 }
 </style>
