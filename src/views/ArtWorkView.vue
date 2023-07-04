@@ -107,8 +107,6 @@
 		 @click="commentPosted = false" role="alert">
 		{{ $t("yourCommentWasPosted") }}
 	</div>
-
-
 </template>
 
 <script>
@@ -198,6 +196,7 @@ export default {
 	min-width: 400px;
 	max-width: 60%;
 }
+
 #art_image{
 	max-width: 100%;
 	max-height: 500px;

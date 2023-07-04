@@ -71,7 +71,7 @@
 				<form class="d-flex mx-lg-0 mx-4" role="search" @submit="search">
 					<div class="input-group">
 						<input type="search" class="form-control" :placeholder="$t('searchArtworks')" 
-							   name="searchText" required>
+							   name="searchText" required :value="$route.params.query">
 						<button class="btn btn-light" type="submit">
 							{{ $t("search") }}
 						</button>
