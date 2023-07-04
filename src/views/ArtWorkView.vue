@@ -12,7 +12,7 @@
 					{{ $t("aboutAuthor") }} {{ artist.name }}
 				</h4>
 
-				<p>{{artist.biography}}</p>
+				<p>{{artist.biography[$i18n.locale]}}</p>
 			
 				<hr />
 

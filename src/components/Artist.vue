@@ -6,7 +6,7 @@
 		
 		<div class="col-lg-8">
 			<h4>{{ artist.name }}</h4>
-			<p>{{ artist.biography }}</p>
+			<p>{{ artist.biography[$i18n.locale] }}</p>
 
 			<button type="button" class="btn btn-light ms-auto" @click="generateWorksDocument">
 				{{ $t("artistsWorks") }}
