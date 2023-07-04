@@ -41,7 +41,7 @@
 				<img :src="image.link" class="d-block w-100">
 			</div>
 
-			<div class="carousel-item">
+			<div v-if="artwork.video" class="carousel-item">
 				<iframe width="560" height="315" :src="artwork.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</div>
 		</div>
